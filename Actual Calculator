@@ -1,0 +1,66 @@
+#Actual Calc
+def add(a,b):
+    result = a + b
+    print ("Here is the result: ", + result)
+    print(" ")
+def multiply(a,b):
+    result = a * b
+    print ("Here is the result: ", + result)
+    print(" ")
+def divide(a,b):
+    result = a / b
+    print ("Here is the result: ", + result)
+    print(" ")
+def sub(a,b):
+    result = a - b
+    print ("Here is the result: ", + result)
+    print(" ")
+def expo(a,b):
+    result = a ** b
+    print ("Here is the result: ", + result)
+    print(" ")
+def menu():
+    print ("Which operation should I perform? ")
+    print("1) Addition")
+    print("2) Subtraction")
+    print("3) Multiplication")
+    print("4) Division")
+    print("5) Exponentials")
+    print("6) Quit")
+
+
+def main():
+    menu()
+    option = (input("Select an option: "))
+
+    if option == '1':
+        a =float(input("What is the first number you want to add? "))
+        b =float(input("What is the second number you want to add? "))
+        add(a,b)
+        main()
+    elif option == '2':
+        a =float(input("What is the number you want to subtract from? "))
+        b =float(input("What is the number you want to subtract? "))
+        sub(a,b)
+        main()
+    elif option == '3':
+        a =float(input("What is the first number you want to multiply? "))
+        b =float(input("What is the second number you want to multiply? "))
+        multiply(a,b)
+        main()
+    elif option == '4':
+        a =float(input("What is the dividend? "))
+        b =float(input("What is the divisor? "))
+        divide(a,b)
+        main()
+    elif option == '5':
+        a =float(input("What is the base number? "))
+        b =float(input("What is the exponent? "))
+        expo(a,b)
+        main()
+    elif option == '6': 
+        print("Going to sleep now...")
+    else:
+        print("Hmmm, let's try again...")
+        main()
+main()
